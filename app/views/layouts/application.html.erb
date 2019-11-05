@@ -7,9 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/ff7ab9d42a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="alert alert-secondary banner" role="alert" style="margin-bottom: 24px">
+      <%= link_to 'Wikinimous', root_path %>
+      <%= link_to 'New Article', new_article_path %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

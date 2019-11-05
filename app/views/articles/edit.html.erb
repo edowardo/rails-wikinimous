@@ -1,0 +1,15 @@
+<h1>Editing Article</h1>
+<%= form_for(@article) do |f| %>
+  <div class="form-group">
+    <strong><%= f.label :title %></strong>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <strong><%= f.label :content %></strong>
+    <%= f.text_area :content, class: 'form-control', id: "exampleFormControlTextarea1"%>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+<hr>
+<%= link_to "back", root_path  %>
